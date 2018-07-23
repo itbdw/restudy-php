@@ -142,6 +142,9 @@ class PSMath
      * @return string
      */
     public static function floor2($money_yuan, $scale = null) {
+        if ($scale === null) {
+            $scale = self::$scale;
+        }
         return substr(sprintf("%.".(++$scale)."f", $money_yuan), 0, -1);
     }
 }
