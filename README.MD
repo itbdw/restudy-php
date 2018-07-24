@@ -9,3 +9,6 @@ PHP从5到7有了很大进步，除了性能的提升，
 因此计划把一些自己觉得比较好玩的东西放进来。又一想，干脆自己再"学"一遍好了。
 
 项目以 http://php.net/manual/zh/index.php 为基础指导，以 php 7.0 为最低版本做测试。
+
+此外，建议阅读 php the right way 来跟进时代的发展。https://www.phptherightway.com/
+
