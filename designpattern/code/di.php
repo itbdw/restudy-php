@@ -127,8 +127,7 @@ class RedisCacheAdapter implements CacheAdapterInterface {
 
     public function set($key, $value)
     {
-        $this->di->redis->set($key, $value);
-        return true;
+        return $this->di->redis->set($key, $value);
     }
 
     public function get($key, $default = null)
@@ -138,14 +137,12 @@ class RedisCacheAdapter implements CacheAdapterInterface {
 
     public function expire($key, $ttl)
     {
-        $this->di->redis->expire($key, $ttl);
-        return false;
+        return $this->di->redis->expire($key, $ttl);
     }
 
     public function delete($key)
     {
-        $this->di->redis->delete($key);
-        return true;
+        return $this->di->redis->delete($key);
     }
 
 
