@@ -10,5 +10,11 @@ PHP从5到7有了很大进步，除了性能的提升，
 
 项目以 http://php.net/manual/zh/index.php 为基础指导，以 php 7.0 为最低版本做测试。
 
-此外，建议阅读 php the right way 来跟进时代的发展。https://www.phptherightway.com/
+
+参考资料
+
+https://www.phptherightway.com/
+
+https://www.php-fig.org/
+
 
