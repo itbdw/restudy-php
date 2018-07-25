@@ -6,6 +6,38 @@
  * Time: 上午4:08
  */
 
+function fork() {
+    $pid = pcntl_fork();
+    if ($pid == -1) {
+        throw new RuntimeException("fork failed");
+    }
+    return $pid;
+}
+
+$pid = fork();
+
+//child
+if ($pid === 0) {
+    //子进程得到的$pid为0, 所以这里是子进程执行的逻辑。
+    echo "child process\n";
+    sleep("1");
+    echo "child finished\n";
+    sleep("1");
+}
+
+//parent
+if ($pid > 0) {
+
+    pcntl_wait($status);
+    $exitStatus = pcntl_wexitstatus($status);
+
+    if ($exitStatus !== 0) {
+        die("child" . $exitStatus);
+    } else {
+        die("ok");
+    }
+}
+
 
 /**
  *

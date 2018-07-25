@@ -1,6 +1,39 @@
 <?php
 
 
+$host = "www.baidu.com";
+$url = $host;
+
+$fp = fsockopen($url, 80, $errno, $errstr, 30);
+if (!$fp) {
+    echo "$errstr ($errno)<br />\n";
+} else {
+    $out = "GET /ip.php HTTP/1.1\r\n";
+    $out .= "Host: ${host}\r\n";
+    $out .= "Connection: Close\r\n\r\n";
+    fwrite($fp, $out);
+
+    $res = '';
+    while (!feof($fp)) {
+        $res .= fgets($fp, 128);
+    }
+    echo $res;
+    fclose($fp);
+}
+
+//
+//$fp = fsockopen("udp://127.0.0.1", 13, $errno, $errstr);
+//if (!$fp) {
+//    echo "no fp\n";
+//    echo "ERROR: $errno - $errstr<br />\n";
+//} else {
+//    echo "has fp\n";
+//    fwrite($fp, "\n");
+//    echo fread($fp, 26);
+//    fclose($fp);
+//}
+
+
 /**
  *
  *
