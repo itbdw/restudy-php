@@ -132,7 +132,8 @@ class RedisCacheAdapter implements CacheAdapterInterface {
 
     public function get($key, $default = null)
     {
-        return $this->di->redis->get($key);
+        $res = $this->di->redis->get($key);
+        return $res !== false ? $res : $default;
     }
 
     public function expire($key, $ttl)
@@ -151,10 +152,12 @@ class RedisCacheAdapter implements CacheAdapterInterface {
 $di = new Container();
 
 $di->set("redis", function () {
-    return new Redis();
+    $redis = new Redis();
+    $redis->connect("localhost");
+    return $redis;
 });
 
-$di->set("cache", function() use ($di) {
+$di->set("cache", function() {
    return new ArrayCacheAdapter();
 });
 
@@ -162,7 +165,9 @@ $di->set("cache", function() use ($di) {
 //   return new RedisCacheAdapter($di);
 //});
 
-$di->cache->set("foo", "bar");
+var_dump($di->cache->get("foo"));
+var_dump($di->cache->delete("foo"));
+var_dump($di->cache->set("foo", "bar"));
 var_dump($di->cache->get("foo"));
 var_dump($di->cache->get("h"));
 var_dump($di->cache->get("h", 'e'));
