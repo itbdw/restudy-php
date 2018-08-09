@@ -1,0 +1,6 @@
+{
+    "require": {
+        "chargeover/redlock-php": "^1.0",
+        "php-ds/php-ds": "^1.2"
+    }
+}

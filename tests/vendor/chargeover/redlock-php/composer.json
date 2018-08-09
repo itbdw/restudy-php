@@ -1,0 +1,28 @@
+{
+    "name": "chargeover/redlock-php",
+    "description": "Redis distributed locks in PHP",
+    "authors": [
+        {
+            "name": "Ronny Lopez",
+            "email": "ronny@tangotree.io"
+        },
+        {
+            "name": "Keith Palmer",
+            "email": "keith@ChargeOver.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "colinmollenhour/credis": "^1.7"
+    },
+    "suggest": {
+        "ext-redis": "Native PHP extension for Redis connectivity. Credis will automatically utilize when available."
+    },
+    "autoload": {
+        "psr-4": {
+            "RedLock\\": "src/"
+        }
+    }
+
+
+}

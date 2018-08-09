@@ -1,0 +1,136 @@
+[
+    {
+        "name": "chargeover/redlock-php",
+        "version": "v1.0.8",
+        "version_normalized": "1.0.8.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/chargeover/redlock-php.git",
+            "reference": "b1ccd46ec252cd62858a6212189fca384a9baeb3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/chargeover/redlock-php/zipball/b1ccd46ec252cd62858a6212189fca384a9baeb3",
+            "reference": "b1ccd46ec252cd62858a6212189fca384a9baeb3",
+            "shasum": ""
+        },
+        "require": {
+            "colinmollenhour/credis": "^1.7",
+            "php": ">=5.4.0"
+        },
+        "suggest": {
+            "ext-redis": "Native PHP extension for Redis connectivity. Credis will automatically utilize when available."
+        },
+        "time": "2017-06-21T15:24:58+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "RedLock\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Ronny Lopez",
+                "email": "ronny@tangotree.io"
+            },
+            {
+                "name": "Keith Palmer",
+                "email": "keith@ChargeOver.com"
+            }
+        ],
+        "description": "Redis distributed locks in PHP"
+    },
+    {
+        "name": "colinmollenhour/credis",
+        "version": "1.10.0",
+        "version_normalized": "1.10.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/colinmollenhour/credis.git",
+            "reference": "8ab6db707c821055f9856b8cf76d5f44beb6fd8a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/colinmollenhour/credis/zipball/8ab6db707c821055f9856b8cf76d5f44beb6fd8a",
+            "reference": "8ab6db707c821055f9856b8cf76d5f44beb6fd8a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2018-05-07T14:45:04+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "Client.php",
+                "Cluster.php",
+                "Sentinel.php",
+                "Module.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Colin Mollenhour",
+                "email": "colin@mollenhour.com"
+            }
+        ],
+        "description": "Credis is a lightweight interface to the Redis key-value store which wraps the phpredis library when available for better performance.",
+        "homepage": "https://github.com/colinmollenhour/credis"
+    },
+    {
+        "name": "php-ds/php-ds",
+        "version": "v1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-ds/polyfill.git",
+            "reference": "27bed3897f9c801604f5bdcb65b71eb61ec80099"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-ds/polyfill/zipball/27bed3897f9c801604f5bdcb65b71eb61ec80099",
+            "reference": "27bed3897f9c801604f5bdcb65b71eb61ec80099",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "php-ds/tests": "^1.2"
+        },
+        "suggest": {
+            "ext-ds": "to improve performance and reduce memory usage"
+        },
+        "time": "2017-08-03T02:03:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Ds\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Rudi Theunissen",
+                "email": "rudolf.theunissen@gmail.com"
+            }
+        ],
+        "keywords": [
+            "data structures",
+            "ds",
+            "php",
+            "polyfill"
+        ]
+    }
+]
