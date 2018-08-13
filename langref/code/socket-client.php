@@ -27,9 +27,7 @@ if ($result === false) {
     echo "OK.\n";
 }
 
-$in = "HEAD / HTTP/1.1\r\n";
-$in .= "Host: 127.0.0.1\r\n";
-$in .= "Connection: Close\r\n\r\n";
+$in = 'quit';
 $out = '';
 
 echo "Sending HTTP HEAD request...";
